@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     
+    <!-- What we are creating with this code -->
+      <title>Random Password Generator</title>
+
+    <!-- Bootstrap CSS  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Kanit:300,500,700'> 
+    
+    <!-- Adding my own CSS Style -->
+    <link rel="stylesheet" href="style.css">
+  
+  
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"></a>
+    </nav>
+
+  </head>
+  <body>
+     
+    <!-- Used CSS Style to create a nice visual interface -->
+      <div class="container-fluid-nav text-center"></div>
+    <div class="wrapper">
+    <div class="title-section">
+      <h1 class="title">Random JS Password Generator</h1>
+    </div>
+    <div class="inner-section">
+      <div class="password-section">
+      <div class="pass-field" id="pass-field">
+      ----
+    </div>
+      <button id="copy" class="copy">Copy</button>
+      <div class="alert" id="alert"><span class="message" id="message"></div>
+    </div>
+    <p class="info">Select your options and click the "Generate" button. Then your password will appear above.</p>
+    <div class="controls">
+      <div class="control length" id="length-box" >
+        <label for="length">Password Length</label>
+
+      <!--  Using a slider to make sure user choses a password length between 8 to 128 --> 
+      
+        <input type="range" min="8" max="128" name="slider" id="length"> <p id="len">68</p>
+    
+
+      <!-- Give user options for which type of characters they want to use in their password  and create Generate button -->
+      </div>
+      <div class="control">
+        <input type="checkbox" id="lowercase">
+        <label class="check-label" for="lowercase"><span class="checkbox">Use Lowercase Characters</span></label>
+      </div>
+      <div class="control">
+        <input type="checkbox" id="uppercase">
+        <label class="check-label" for="uppercase"><span class="checkbox">Use Uppercase Characters</span></label>
+      </div>
+      <div class="control">
+        <input type="checkbox" id="numbers">
+        <label class="check-label" for="numbers"><span class="checkbox">Use Numbers</span></label>
+      </div>
+      <div class="control">
+        <input type="checkbox" id="punctuation">
+        <label class="check-label" for="punctuation"><span class="checkbox">Use special characters</span></label>
+      </div>
+      
+      <button class="generate" id="generate">Generate!</button>
+      
+      
+    </div>
+    </div>
+  </div>
+   
+  <script src='https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js'></script> 
+   
+  
+ 
+
+  <!-- old way to do it, these lines are not needed but left to show that I started homework on a simper version but ultimately decided to make it the best I could as I learned more
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-sm-12 mx-auto">
+
+                <div class="content">
+                    <h3>Random Password Generator</h3>
+                    <br/>
+                    <input type="text" id="display">
+                    </br>
+                    <input type="range" min="8" max="128" name="slider" id="slider">
+                    <br>
+                    <button onclick="generatePassword()">Generate</button>
+                    <button onclick="CopytoClipboard()">Copy to Clipboard</button>
+                    <div id="length"></div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+  -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS, they are not all used for this assignment yet but it also adds my own script.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
